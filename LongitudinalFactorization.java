@@ -131,8 +131,7 @@ public class LongitudinalFactorization {
 		// final String path_to_original_data = args[0];
 		// final String path_to_reduced_data = args[1];
 
-		LongitudinalLinkedDataInMemoryUpdatedV10Cytoscape
-		.singleFileFactorization(
+		LongitudinalLinkedDataInMemoryUpdatedV10.singleFileFactorization(
 						"/home/hadoop/Cytoscape_v3.4.0/RDFData/RDFFullFILES/RDFN3/",
 				"/home/hadoop/Cytoscape_v3.4.0/RDFData/RDFFullFILES/RDFFactorized/");
 		// generateOriginalCytoscapeCSV("/home/hadoop/Cytoscape_v3.4.0/RDFData/RDFFullFILES/RDFCSV/rdfOriginalcsvData.csv");
