@@ -17,7 +17,6 @@
  * This query was very expensive so we directly created RDF triples representing these links and are added to the factorized dataset.
  * 9. Optimizations are done to run factorization faster***/
 
-package LLDFactorizationPackage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
