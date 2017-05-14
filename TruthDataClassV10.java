@@ -104,12 +104,12 @@ public class TruthDataClassV10 {
 
 		if (mURI != null) {
 
-			final int mCounter = LongitudinalFactorization.mapTruthCounterCytoscape
-					.get(mURI);
-			LongitudinalFactorization.lines.add(new LineCSVCytoscape(result
-					.toString(), "value", value.toString(), mCounter));
-			LongitudinalFactorization.lines.add(new LineCSVCytoscape(result
-					.toString(), "rdf:type", "TruthMeasurement", mCounter));
+			//final int mCounter = LongitudinalFactorization.mapTruthCounterCytoscape
+			//		.get(mURI);
+			//LongitudinalFactorization.lines.add(new LineCSVCytoscape(result
+			//		.toString(), "value", value.toString(), mCounter));
+			//LongitudinalFactorization.lines.add(new LineCSVCytoscape(result
+			//		.toString(), "rdf:type", "TruthMeasurement", mCounter));
 
 			// System.out.println("Truth Molecule found.....");// executes
 			final observationClass obs = new observationClass(sensor, property,
@@ -122,30 +122,30 @@ public class TruthDataClassV10 {
 				// LongitudinalFactorization.mapObservationCounterCytoscape
 				// .get(obsURI);
 
-				LongitudinalFactorization.lines.add(new LineCSVCytoscape(
-						observation.toString(), "sensor", sensor.toString(),
-						mCounter));
-				LongitudinalFactorization.lines.add(new LineCSVCytoscape(sensor
-						.toString(), "sensedBy", observation.toString(),
-						mCounter));
-				LongitudinalFactorization.lines.add(new LineCSVCytoscape(
-						observation.toString(), "property",
-						property.toString(), mCounter));
-				LongitudinalFactorization.lines.add(new LineCSVCytoscape(
-						observation.toString(), "phenomena", phenomenon
-								.toString(), mCounter));
-				LongitudinalFactorization.lines.add(new LineCSVCytoscape(
-						observation.toString(), "result", result.toString(),
-						mCounter));
-				LongitudinalFactorization.lines.add(new LineCSVCytoscape(
-						observation.toString(), "samplingTime", samplingTime
-								.toString(), mCounter));
-				LongitudinalFactorization.lines.add(new LineCSVCytoscape(
-						samplingTime.toString(), "rdf:type", "Instant",
-						mCounter));
-				LongitudinalFactorization.lines.add(new LineCSVCytoscape(
-						samplingTime.toString(), "time", time.toString(),
-						mCounter));
+				//LongitudinalFactorization.lines.add(new LineCSVCytoscape(
+				//		observation.toString(), "sensor", sensor.toString(),
+				//		mCounter));
+			//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(sensor
+			//			.toString(), "sensedBy", observation.toString(),
+			//			mCounter));
+			//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(
+			//			observation.toString(), "property",
+			//			property.toString(), mCounter));
+			//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(
+			//			observation.toString(), "phenomena", phenomenon
+			//					.toString(), mCounter));
+			//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(
+			//			observation.toString(), "result", result.toString(),
+			//			mCounter));
+			//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(
+			//			observation.toString(), "samplingTime", samplingTime
+			//					.toString(), mCounter));
+			//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(
+			//			samplingTime.toString(), "rdf:type", "Instant",
+			//			mCounter));
+			//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(
+			//			samplingTime.toString(), "time", time.toString(),
+			//			mCounter));
 
 				LongitudinalFactorization.reducedModel
 						.add(obsURI,
@@ -153,23 +153,23 @@ public class TruthDataClassV10 {
 										.createProperty("http://linkeddata.com/ontology#hasObservation"),
 								observation);
 
-				LongitudinalFactorization.linesFactorized
-				.add(new LineCSVCytoscape(obsURI.toString(),
-						"hasObservation", observation.toString(),
-						mCounter));
-				LongitudinalFactorization.linesFactorized
-				.add(new LineCSVCytoscape(observation.toString(),
-						"samplingTime", samplingTime.toString(),
-						mCounter));
-				LongitudinalFactorization.linesFactorized
-				.add(new LineCSVCytoscape(observation.toString(),
-						"result", result.toString(), mCounter));
-				LongitudinalFactorization.linesFactorized
-						.add(new LineCSVCytoscape(samplingTime.toString(),
-								"rdf:type", "Instant", mCounter));
-				LongitudinalFactorization.linesFactorized
-						.add(new LineCSVCytoscape(samplingTime.toString(),
-								"time", time.toString(), mCounter));
+				//LongitudinalFactorization.linesFactorized
+			//	.add(new LineCSVCytoscape(obsURI.toString(),
+			//			"hasObservation", observation.toString(),
+			//			mCounter));
+			//	LongitudinalFactorization.linesFactorized
+			//	.add(new LineCSVCytoscape(observation.toString(),
+			//			"samplingTime", samplingTime.toString(),
+			//			mCounter));
+			//	LongitudinalFactorization.linesFactorized
+			//	.add(new LineCSVCytoscape(observation.toString(),
+			//			"result", result.toString(), mCounter));
+			//	LongitudinalFactorization.linesFactorized
+			//			.add(new LineCSVCytoscape(samplingTime.toString(),
+			//					"rdf:type", "Instant", mCounter));
+			//	LongitudinalFactorization.linesFactorized
+			//			.add(new LineCSVCytoscape(samplingTime.toString(),
+			//					"time", time.toString(), mCounter));
 			} // / end of if (obsURI != null)
 			else {
 				// System.out.println("observation Molecule NOT found.....");///executes
@@ -196,14 +196,14 @@ public class TruthDataClassV10 {
 		final Resource new_mURI = LongitudinalFactorization.reducedModel
 				.createResource("http://linkeddata.com/ontology#" + value);
 
-		final int mCounter = LongitudinalFactorization.mMoleculeCounter++;
-		LongitudinalFactorization.mapTruthCounterCytoscape.put(new_mURI,
-				mCounter);
-		LongitudinalFactorization.lines.add(new LineCSVCytoscape(result
-				.toString(), "value", value.toString(), mCounter));
+		//final int mCounter = LongitudinalFactorization.mMoleculeCounter++;
+		//LongitudinalFactorization.mapTruthCounterCytoscape.put(new_mURI,
+		//		mCounter);
+		//LongitudinalFactorization.lines.add(new LineCSVCytoscape(result
+		//		.toString(), "value", value.toString(), mCounter));
 
-		LongitudinalFactorization.lines.add(new LineCSVCytoscape(result
-				.toString(), "rdf:type", "TruthMeasurement", mCounter));
+//		LongitudinalFactorization.lines.add(new LineCSVCytoscape(result
+//				.toString(), "rdf:type", "TruthMeasurement", mCounter));
 
 		LongitudinalFactorization.mapTruth.put(value, new_mURI);
 		LongitudinalFactorization.reducedModel
@@ -219,11 +219,11 @@ public class TruthDataClassV10 {
 						LongitudinalFactorization.reducedModel
 								.createTypedLiteral(value));
 
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				new_mURI.toString(), "rdf:type", "TruthData", mCounter));
-		LongitudinalFactorization.linesFactorized
-		.add(new LineCSVCytoscape(new_mURI.toString(), "booleanvalue",
-				value.toString(), mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		new_mURI.toString(), "rdf:type", "TruthData", mCounter));
+		//LongitudinalFactorization.linesFactorized
+		//.add(new LineCSVCytoscape(new_mURI.toString(), "booleanvalue",
+		//		value.toString(), mCounter));
 
 		return new_mURI;
 	}
@@ -232,32 +232,32 @@ public class TruthDataClassV10 {
 	public static void createObservationMolecule(final observationClass obs,
 			final Resource observation, final Resource result,
 			final Resource samplingTime, final RDFNode time) {
-		final int mCounter = LongitudinalFactorization.mapTruthCounterCytoscape
-				.get(obs.getmURI());
+		//final int mCounter = LongitudinalFactorization.mapTruthCounterCytoscape
+		//		.get(obs.getmURI());
 		final Resource new_obsURI = LongitudinalFactorization.reducedModel
 				.createResource("http://linkeddata.com/ontology#"
 						+ observation.getLocalName());
 
-		LongitudinalFactorization.lines.add(new LineCSVCytoscape(observation
-				.toString(), "sensor", obs.getSensor().toString(), mCounter));
-		LongitudinalFactorization.lines.add(new LineCSVCytoscape(obs
-				.getSensor().toString(), "sensedBy", observation.toString(),
-				mCounter));
-		LongitudinalFactorization.lines
-		.add(new LineCSVCytoscape(observation.toString(), "property",
-				obs.getProperty().toString(), mCounter));
-		LongitudinalFactorization.lines.add(new LineCSVCytoscape(observation
-				.toString(), "phenomena", obs.getPhenomenon().toString(),
-				mCounter));
-		LongitudinalFactorization.lines.add(new LineCSVCytoscape(observation
-				.toString(), "result", result.toString(), mCounter));
-		LongitudinalFactorization.lines
-		.add(new LineCSVCytoscape(observation.toString(),
-				"samplingTime", samplingTime.toString(), mCounter));
-		LongitudinalFactorization.lines.add(new LineCSVCytoscape(samplingTime
-				.toString(), "rdf:type", "Instant", mCounter));
-		LongitudinalFactorization.lines.add(new LineCSVCytoscape(samplingTime
-				.toString(), "time", time.toString(), mCounter));
+		//LongitudinalFactorization.lines.add(new LineCSVCytoscape(observation
+		//		.toString(), "sensor", obs.getSensor().toString(), mCounter));
+		//LongitudinalFactorization.lines.add(new LineCSVCytoscape(obs
+		//		.getSensor().toString(), "sensedBy", observation.toString(),
+		//		mCounter));
+		//LongitudinalFactorization.lines
+		//.add(new LineCSVCytoscape(observation.toString(), "property",
+		//		obs.getProperty().toString(), mCounter));
+	//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(observation
+	//			.toString(), "phenomena", obs.getPhenomenon().toString(),
+	//			mCounter));
+	//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(observation
+	//			.toString(), "result", result.toString(), mCounter));
+	//	LongitudinalFactorization.lines
+	//	.add(new LineCSVCytoscape(observation.toString(),
+	//			"samplingTime", samplingTime.toString(), mCounter));
+	//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(samplingTime
+	//			.toString(), "rdf:type", "Instant", mCounter));
+	//	LongitudinalFactorization.lines.add(new LineCSVCytoscape(samplingTime
+	//			.toString(), "time", time.toString(), mCounter));
 
 		LongitudinalFactorization.mapObservation.put(obs, new_obsURI);
 		LongitudinalFactorization.reducedModel
@@ -291,33 +291,33 @@ public class TruthDataClassV10 {
 								.createProperty("http://linkeddata.com/ontology#hasObservation"),
 						observation);
 
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				new_obsURI.toString(), "result", obs.getmURI().toString(),
-				mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				new_obsURI.toString(), "rdf:type", obs.getPhenomenon()
-				.toString(), mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				new_obsURI.toString(), "property",
-				obs.getProperty().toString(), mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				new_obsURI.toString(), "sensor", obs.getSensor().toString(),
-				mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(obs
-				.getSensor().toString(), "sensedBy", new_obsURI.toString(),
-				mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				new_obsURI.toString(), "hasObservation",
-				observation.toString(), mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				observation.toString(), "result", result.toString(), mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				observation.toString(), "samplingTime",
-				samplingTime.toString(), mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				samplingTime.toString(), "rdf:type", "Instant", mCounter));
-		LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
-				samplingTime.toString(), "time", time.toString(), mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		new_obsURI.toString(), "result", obs.getmURI().toString(),
+		//		mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		new_obsURI.toString(), "rdf:type", obs.getPhenomenon()
+		//		.toString(), mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		new_obsURI.toString(), "property",
+		//		obs.getProperty().toString(), mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		new_obsURI.toString(), "sensor", obs.getSensor().toString(),
+		//		mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(obs
+		//		.getSensor().toString(), "sensedBy", new_obsURI.toString(),
+		//		mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		new_obsURI.toString(), "hasObservation",
+		//		observation.toString(), mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		observation.toString(), "result", result.toString(), mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		observation.toString(), "samplingTime",
+		//		samplingTime.toString(), mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		samplingTime.toString(), "rdf:type", "Instant", mCounter));
+		//LongitudinalFactorization.linesFactorized.add(new LineCSVCytoscape(
+		//		samplingTime.toString(), "time", time.toString(), mCounter));
 
 	}
 }
