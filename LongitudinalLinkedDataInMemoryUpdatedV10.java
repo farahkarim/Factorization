@@ -214,7 +214,7 @@ public class LongitudinalLinkedDataInMemoryUpdatedV10 {
 				"\\.");
 		final Resource new_mURI = LongitudinalFactorization.reducedModel
 				.createResource("http://linkeddata.com/ontology#"
-						+ measurement.getUOM().getLocalName() + valueStr[0]
+						+ measurement.getUOM().getLocalName() + valueStr[0]+ "DP"
 						+ valueStr[1]);
 		LongitudinalFactorization.mapMeasurement.put(measurement, new_mURI);
 		LongitudinalFactorization.reducedModel
